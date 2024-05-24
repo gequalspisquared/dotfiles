@@ -5,6 +5,15 @@ and commands for installing everything.
 ## Requirements
 Ensure the following are installed on your system:
 
+### Any Nerd Font
+I suggest [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads).
+After downloading the fonts, unzip the downloaded folder and cd into 
+it. Then install the fonts
+```
+sudo cp *.ttf /usr/share/fonts/
+sudo fc-cache -fv
+```
+
 ### Git
 ```
 sudo apt install git
@@ -76,11 +85,16 @@ curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
 ```
 
 ## Optional tools
-I'd also highly recommend install ripgrep and entr.
+I'd also highly recommend installing ripgrep, fzf, and entr.
 
 ### ripgrep
 ```
 sudo apt install ripgrep
+```
+
+### fzf
+```
+sudo apt install fzf
 ```
 
 ### entr
