@@ -2,5 +2,5 @@
 	path = .config/nvim
 	url = https://github.com/gequalspisquared/kickstart.nvim
 [submodule "kitty/kitty-themes"]
-	path = kitty/kitty-themes
+	path = .config/kitty/kitty-themes
 	url = https://github.com/dexpota/kitty-themes
