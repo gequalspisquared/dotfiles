@@ -84,7 +84,7 @@ First, install rust from [rustup](https://rustup.rs) as well
 as any Nerd Font.
 ```
 sudo apt-get install ninja-build gettext cmake unzip curl build-essential
-sudo apt install git tmux stow zsh eza bat
+sudo apt install git tmux stow zsh bat
 chsh -s /usr/bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
