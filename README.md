@@ -136,7 +136,7 @@ stow .
 After running this, it would be a good idea to install the tmux 
 plugins. To do this, create a tmux session with ```tmux``` and 
 run ```<C-Space>I``` to install the plugins. Also restart the 
-terminal and zsh should now be the default shell.\\
+terminal and zsh should now be the default shell.\
 
 And that is it! Everything should now be configured the way I like
 it on any system. Feel free to fork this repo and tailor it to 
