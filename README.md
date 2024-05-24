@@ -45,6 +45,12 @@ sudo apt install stow
 ### zsh
 ```
 sudo apt install zsh
+chsh -s /usr/bin/zsh
+```
+
+### oh-my-zsh
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ### starship
@@ -72,6 +78,8 @@ curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
 First, install rust from [rustup](https://rustup.rs).
 ```
 sudo apt install git tmux stow zsh eza bat
+chsh -s /usr/bin/zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone git@github.com:neovim/neovim.git
 cd neovim
 sudo apt-get install ninja-build gettext cmake unzip curl build-essential
@@ -120,7 +128,8 @@ stow .
 
 After running this, it would be a good idea to install the tmux 
 plugins. To do this, create a tmux session with ```tmux``` and 
-run ```<C-Space>I``` to install the plugins.\\
+run ```<C-Space>I``` to install the plugins. Also restart the 
+terminal and zsh should now be the default shell.\\
 
 And that is it! Everything should now be configured the way I like
 it on any system. Feel free to fork this repo and tailor it to 
