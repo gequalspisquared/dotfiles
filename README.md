@@ -128,7 +128,7 @@ After installing the required dependencies, ```git clone``` this repo
 to your $HOME, cd into it, and run ```stow .```.
 ```
 cd
-git clone git@github.com:gequalspisquared/dotfiles.git
+git clone --recurse-submodules git@github.com:gequalspisquared/dotfiles.git
 cd dotfiles
 stow .
 ```
