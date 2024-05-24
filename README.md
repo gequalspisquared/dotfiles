@@ -95,7 +95,7 @@ sudo make install
 cd ..
 rm -rf neovim
 curl -sS https://starship.rs/install.sh | sh
-cargo isntall eza
+cargo install eza
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 ```
 
