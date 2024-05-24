@@ -37,6 +37,11 @@ rm -rf neovim
 sudo apt install tmux
 ```
 
+### tpm
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
 ### stow 
 ```
 sudo apt install stow
@@ -75,14 +80,16 @@ curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
 ```
 
 ### All together
-First, install rust from [rustup](https://rustup.rs).
+First, install rust from [rustup](https://rustup.rs) as well 
+as any Nerd Font.
 ```
+sudo apt-get install ninja-build gettext cmake unzip curl build-essential
 sudo apt install git tmux stow zsh eza bat
 chsh -s /usr/bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone git@github.com:neovim/neovim.git
 cd neovim
-sudo apt-get install ninja-build gettext cmake unzip curl build-essential
 make CMAKE_BUILD_TYPE=Release
 sudo make install
 cd ..
