@@ -1,4 +1,4 @@
-# My dotfiles
+
 This repo contains dotfiles for my system, as well as directions 
 and commands for installing everything.
 
@@ -121,6 +121,13 @@ make test
 sudo make install
 cd ..
 rm -rf entr
+```
+
+## Kitty
+I use kitty as my terminal emulator. 
+
+```
+sudo apt-get install kitty
 ```
 
 ## Installing dotfiles
