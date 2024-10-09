@@ -114,3 +114,6 @@ elif command -v batcat > /dev/null; then
 fi
 
 alias cd="z"
+
+# zig directory
+export PATH=$PATH:~/.zig
