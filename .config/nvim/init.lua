@@ -159,6 +159,8 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+vim.opt.colorcolumn = '80,120'
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
