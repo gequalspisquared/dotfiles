@@ -233,7 +233,7 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  -- 'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -255,13 +255,13 @@ require('lazy').setup({
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {
-      signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
-      },
+      -- signs = {
+      --   add = { text = '+' },
+      --   change = { text = '~' },
+      --   delete = { text = '_' },
+      --   topdelete = { text = '‾' },
+      --   changedelete = { text = '~' },
+      -- },
     },
   },
 
@@ -285,21 +285,42 @@ require('lazy').setup({
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     config = function() -- This is the function that runs, AFTER loading
       require('which-key').setup()
-
       -- Document existing key chains
-      require('which-key').register {
-        ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-        ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-        ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-        ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-        ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
-        ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
-        ['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
+      require('which-key').add {
+        { '<leader>c', name = '[C]ode' },
+        { '<leader>d', name = '[D]ocument' },
+        { '<leader>g', name = '[G]it' },
+        { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>r', name = '[R]ename' },
+        { '<leader>s', name = '[S]earch' },
+        { '<leader>t', name = '[T]oggle' },
+        { '<leader>w', name = '[W]orkspace' },
+
+        -- register which-key VISUAL mode
+        -- required for visual <leader>hs (hunk stage) to work
+        { '<leader>', name = 'VISUAL <leader>', mode = { 'v' } },
       }
-      -- visual mode
-      require('which-key').register({
-        ['<leader>h'] = { 'Git [H]unk' },
-      }, { mode = 'v' })
+      -- {
+      --   ['<leader>c'] = { group = '[C]ode' },
+      --   ['<leader>c_'] = { hidden = true },
+      --   ['<leader>d'] = { group = '[D]ocument' },
+      --   ['<leader>d_'] = { hidden = true },
+      --   ['<leader>r'] = { group = '[R]ename' },
+      --   ['<leader>r_'] = { hidden = true },
+      --   ['<leader>s'] = { group = '[S]earch' },
+      --   ['<leader>s_'] = { hidden = true },
+      --   ['<leader>w'] = { group = '[W]orkspace' },
+      --   ['<leader>w_'] = { hidden = true },
+      --   ['<leader>t'] = { group = '[T]oggle' },
+      --   ['<leader>t_'] = { hidden = true },
+      --   ['<leader>h'] = { desc = 'Git [H]unk' },
+      --   ['<leader>h_'] = { hidden = true },
+      -- }
+      -- -- visual mode
+      -- require('which-key').add({
+      --   ['<leader>h'] = { 'Git [H]unk' },
+      --   -- ['<leader>h'] = { desc = 'Git [H]unk', mode = 'v' },
+      -- }, { mode = 'v' })
     end,
   },
 
@@ -583,7 +604,7 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         clangd = {},
-        gopls = {},
+        -- gopls = {},
         -- pyright = {},
         rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -798,6 +819,15 @@ require('lazy').setup({
     -- 'sainnhe/gruvbox-material',
     'catppuccin/nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
+    -- opts = {
+    --   transparent_background = true,
+    -- },
+    config = function()
+      require('catppuccin').setup {
+        transparent_background = true,
+      }
+    end,
+
     init = function()
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load

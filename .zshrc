@@ -103,9 +103,11 @@ source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
-alias ls="eza"
-alias ll="eza -alh"
-alias tree="eza --tree"
+if command -v eza > /dev/null; then
+    alias ls="eza"
+    alias ll="eza -alh"
+    alias tree="eza --tree"
+fi
 
 if command -v bat > /dev/null; then
     alias cat="bat"
@@ -113,7 +115,13 @@ elif command -v batcat > /dev/null; then
     alias cat="batcat"
 fi
 
-alias cd="z"
+if command -v z > /dev/null; then
+    alias cd="z"
+fi
 
 # zig directory
 export PATH=$PATH:~/.zig
+
+if command -v screenfetch > /dev/null; then
+    screenfetch
+fi

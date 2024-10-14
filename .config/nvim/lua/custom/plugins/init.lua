@@ -3,10 +3,11 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-  'bufferline',
-  'lualine',
+  'bufferline.nvim',
+  'lualine.nvim',
   'vim-fugitive',
   'nvim-treesitter-context',
-  'compiler',
+  'compiler.nvim',
   'vim-tmux-navigator',
+  -- 'startup.nvim',
 }
