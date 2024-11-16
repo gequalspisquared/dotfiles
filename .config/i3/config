@@ -418,7 +418,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 # exec --no-startup-id sleep 2 && nitrogen --restore
 exec --no-startup-id sleep 1 && feh --bg-fill /home/nicholasc/Pictures/Wallpapers/space.jpg
 # set powersavings for display:
-exec --no-startup-id xset s 480 dpms 600 600 600
+# exec --no-startup-id xset s 480 dpms 600 600 600
 
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms
@@ -452,7 +452,7 @@ exec --no-startup-id /usr/bin/dunst
 # exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 exec --no-startup-id sleep 3 && firefox 
 #exec --no-startup-id sleep 3 && thunar
-exec --no-startup-id sleep 3 && steam
+exec --no-startup-id sleep 10 && steam
 exec --no-startup-id sleep 3 && discord
 exec --no-startup-id sleep 3 && spotify
 

@@ -254,16 +254,18 @@ require('lazy').setup({
   -- See `:help gitsigns` to understand what the configuration keys do
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
-    opts = {
-      -- signs = {
-      --   add = { text = '+' },
-      --   change = { text = '~' },
-      --   delete = { text = '_' },
-      --   topdelete = { text = '‾' },
-      --   changedelete = { text = '~' },
-      -- },
-    },
+    opts = {},
   },
+  --   opts = {
+  -- signs = {
+  --   add = { text = '+' },
+  --   change = { text = '~' },
+  --   delete = { text = '_' },
+  --   topdelete = { text = '‾' },
+  --   changedelete = { text = '~' },
+  -- },
+  -- },
+  -- },
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
@@ -460,7 +462,8 @@ require('lazy').setup({
 
       -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
       -- used for completion, annotations and signatures of Neovim apis
-      { 'folke/neodev.nvim', opts = {} },
+      -- { 'folke/neodev.nvim', opts = {} },
+      { 'folke/lazydev.nvim', opts = {} },
     },
     config = function()
       -- Brief aside: **What is LSP?**
@@ -503,6 +506,15 @@ require('lazy').setup({
           local map = function(keys, func, desc)
             vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
           end
+
+          local bufnr = event.buf
+          local client = vim.lsp.get_client_by_id(event.data.client_id)
+          if vim.tbl_contains({ 'null-ls' }, client.name) then -- blacklist lsp
+            return
+          end
+          require('lsp_signature').on_attach({
+            -- ... setup options here ...
+          }, bufnr)
 
           -- Jump to the definition of the word under your cursor.
           --  This is where a variable was first declared, or where a function is defined, etc.
@@ -630,6 +642,10 @@ require('lazy').setup({
             },
           },
         },
+
+        -- eslint-lsp = {
+        --
+        -- },
       }
 
       -- Ensure the servers and tools above are installed

@@ -3,6 +3,7 @@
 --
 -- See the kickstart.nvim README for more information
 return {
+  'lsp_signature.nvim',
   'bufferline.nvim',
   'lualine.nvim',
   'vim-fugitive',

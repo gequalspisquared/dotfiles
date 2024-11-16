@@ -100,6 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export GOPATH=~/.go
+export GOBIN=~/.go/bin
+export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
+
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
@@ -125,3 +129,6 @@ export PATH=$PATH:~/.zig
 if command -v screenfetch > /dev/null; then
     screenfetch
 fi
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
