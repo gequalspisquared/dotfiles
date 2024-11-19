@@ -8,8 +8,8 @@ return {
   require 'custom.plugins.lsp_signature',
   require 'custom.plugins.lualine',
   require 'custom.plugins.nvim-treesitter-context',
+  -- require 'custom.plugins.startup',
   require 'custom.plugins.snacks',
   require 'custom.plugins.vim-fugitive',
   require 'custom.plugins.vim-tmux-navigator',
-  -- 'startup.nvim',
 }

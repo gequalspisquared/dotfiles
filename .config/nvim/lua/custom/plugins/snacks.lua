@@ -17,5 +17,6 @@ return {
         { section = 'startup' },
       },
     },
+    notifier = { enabled = true },
   },
 }
