@@ -100,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export PATH="$PATH:/usr/local/go/bin"
 export GOPATH=~/.go
 export GOBIN=~/.go/bin
 export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"

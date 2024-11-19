@@ -3,12 +3,13 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-  'lsp_signature.nvim',
-  'bufferline.nvim',
-  'lualine.nvim',
-  'vim-fugitive',
-  'nvim-treesitter-context',
-  'compiler.nvim',
-  'vim-tmux-navigator',
+  require 'custom.plugins.bufferline',
+  require 'custom.plugins.compiler',
+  require 'custom.plugins.lsp_signature',
+  require 'custom.plugins.lualine',
+  require 'custom.plugins.nvim-treesitter-context',
+  require 'custom.plugins.snacks',
+  require 'custom.plugins.vim-fugitive',
+  require 'custom.plugins.vim-tmux-navigator',
   -- 'startup.nvim',
 }
