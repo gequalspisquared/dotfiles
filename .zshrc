@@ -108,6 +108,11 @@ export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
+if command -v fzf > /dev/null; then
+    # Set up fzf key bindings and fuzzy completion
+    source <(fzf --zsh)
+fi
+
 if command -v eza > /dev/null; then
     alias ls="eza"
     alias ll="eza -alh"
