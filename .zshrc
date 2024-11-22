@@ -121,8 +121,10 @@ fi
 
 if command -v bat > /dev/null; then
     alias cat="bat"
+    export BAT_THEME="Catppuccin Macchiato"
 elif command -v batcat > /dev/null; then
     alias cat="batcat"
+    export BAT_THEME="Catppuccin Macchiato"
 fi
 
 if command -v z > /dev/null; then
