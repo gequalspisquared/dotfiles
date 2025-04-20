@@ -301,6 +301,7 @@ set $screenshotdir $HOME/Pictures/Screenshots
 ## App shortcuts
 # bindsym $mod+w exec --no-startup-id /usr/bin/firefox
 bindsym $mod+b exec --no-startup-id /usr/bin/firefox
+bindsym $mod+n exec --no-startup-id /usr/bin/obsidian
 # bindsym $mod+n exec --no-startup-id /usr/bin/thunar
 bindsym $mod+e exec --no-startup-id /usr/bin/thunar
 bindsym Print exec --no-startup-id scrot $screenshotdir/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to $screenshotdir/$(date +"%Y-%m-%d-%T")-screenshot.png"
@@ -323,7 +324,7 @@ set $ws5 "5:"
 # set $ws5 "5:󰙯󰓇"
 # set $ws6 "6"
 set $ws6 "6:"
-set $ws7 "7"
+set $ws7 "7:"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
@@ -346,6 +347,7 @@ assign [class="steam"] $ws4
 # assign [class="TelegramDesktop"] $ws5
 assign [class="discord"] $ws5
 assign [class="(?i)spotify"] $ws6
+assign [class="(?i)obsidian"] $ws7
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=Xfce4-terminal] focus
@@ -353,6 +355,7 @@ for_window [class=(?i)firefox] focus
 for_window [class=Thunar] focus
 for_window [class=Thunderbird] focus
 for_window [class=TelegramDesktop] focus
+for_window [class=(?i)obsidian] focus
 
 ##############
 # compositor #
@@ -451,6 +454,7 @@ exec --no-startup-id /usr/bin/dunst
 #exec --no-startup-id sleep 2 && xfce4-terminal
 # exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 exec --no-startup-id sleep 3 && firefox 
+exec --no-startup-id sleep 2 && obsidian 
 #exec --no-startup-id sleep 3 && thunar
 exec --no-startup-id sleep 10 && steam
 exec --no-startup-id sleep 3 && discord

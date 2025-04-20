@@ -29,13 +29,14 @@ require('lazy').setup({
   require 'plugins.comment',
   -- require 'plugins.compiler',
   require 'plugins.conform',
+  require 'plugins.dooing',
   require 'plugins.gitsigns',
   require 'plugins.harpoon',
   require 'plugins.lazygit',
   require 'plugins.lsp_signature',
   require 'plugins.lualine',
   require 'plugins.nvim-autopairs', -- Add closing parentheses, etc.
-  require 'plugins.nvim-cmp', -- Autocomplete
+  require 'plugins.nvim-cmp',       -- Autocomplete
   require 'plugins.nvim-lspconfig', -- LSP
   require 'plugins.nvim-tree',
   require 'plugins.nvim-treesitter',
