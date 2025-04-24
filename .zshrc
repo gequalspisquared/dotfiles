@@ -158,8 +158,8 @@ if command -v fzf > /dev/null; then
     }
 fi
 
-if command -v screenfetch > /dev/null; then
-    screenfetch
+if command -v fastfetch > /dev/null; then
+    fastfetch
 fi
 
 # Generated for envman. Do not edit.

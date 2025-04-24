@@ -123,11 +123,11 @@ cd ..
 rm -rf entr
 ```
 
-## Kitty
-I use kitty as my terminal emulator. 
+## Ghostty
+I use Ghostty as my terminal emulator. 
 
 ```
-sudo apt-get install kitty
+sudo apt-get install ghostty
 ```
 
 ## Installing dotfiles
