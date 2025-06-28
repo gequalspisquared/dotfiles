@@ -110,6 +110,8 @@ export GOPATH=~/.go
 export GOBIN=~/.go/bin
 export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 
+export PATH="$PATH:/home/nicholasc/.dotnet/tools"
+
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
