@@ -1,0 +1,7 @@
+# Additional packages for everything on hyprland:
+    - hyprland (tiling wm)
+    - waybar (status bar)
+    - swaync (notification daemon)
+    - fastfetch
+    - hyprshot
+    - hyprlock
