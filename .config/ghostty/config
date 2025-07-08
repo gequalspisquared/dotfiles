@@ -43,8 +43,7 @@
 # resize-overlay-duration = 4s 200ms
 
 # Font
-# font-family = "BigBlueTermPlus Nerd Font Mono"
-font-family = "JetBrains Nerd Font Mono"
+font-family = "JetBrainsMono Nerd Font"
 font-size = 14
 
 # Theme
