@@ -1,4 +1,5 @@
-@import "mocha.css"; 
+/* @import "mocha.css";  */
+@import "macchiato.css"; 
 
 * {
     font-family: "JetBrainsMono Nerd Font Propo, MesloLGS Nerd Font Mono Bold";
@@ -9,7 +10,7 @@
 
 window#waybar {
     background: transparent;
-    background-color: @crust;
+    background-color: @base;
     color: @overlay0;
     transition-property: background-color;
     transition-duration: 0.1s;
@@ -39,7 +40,7 @@ button:hover {
 }
 
 #workspaces button.focused {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: @mantle;
     color: @rosewater;
     border-top: 2px solid @rosewater;
 }
