@@ -16,7 +16,7 @@
             "format": "{release}"
         },
         "uptime",
-        "packages",
+        // "packages",
         "shell",
         {
             "type": "display",
