@@ -193,7 +193,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # keybinding in fancy rofi (automated):
-bindsym F1 exec --no-startup-id ~/.config/i3/scripts/keyhint-2
+# bindsym F1 exec --no-startup-id ~/.config/i3/scripts/keyhint-2
 # alternative
 # keybinding list in editor:
 # bindsym $mod+F1 exec --no-startup-id xed ~/.config/i3/keybindings
@@ -346,7 +346,7 @@ assign [class="Thunar"] $ws3
 assign [class="steam"] $ws4
 # assign [class="TelegramDesktop"] $ws5
 assign [class="discord"] $ws5
-assign [class="(?i)spotify"] $ws6
+#assign [class="(?i)spotify"] $ws6
 assign [class="(?i)obsidian"] $ws7
 
 # automatic set focus new window if it opens on another workspace than the current:
@@ -458,7 +458,7 @@ exec --no-startup-id sleep 2 && obsidian
 #exec --no-startup-id sleep 3 && thunar
 exec --no-startup-id sleep 10 && steam
 exec --no-startup-id sleep 3 && discord
-exec --no-startup-id sleep 3 && spotify-launcher
+#exec --no-startup-id sleep 3 && spotify-launcher
 exec xset s off
 exec xset -dpms
 

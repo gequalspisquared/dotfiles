@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export VULKAN_SDK=~/.vulkan/1.3.296.0/x86_64
+export VULKAN_SDK=~/.vulkan/1.4.321.1/x86_64
 export PATH=$VULKAN_SDK/bin:$PATH
 export LD_LIBRARY_PATH=$VULKAN_SDK/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
 export VK_LAYER_PATH=$VULKAN_SDK/share/vulkan/explicit_layer.d
