@@ -37,6 +37,12 @@ rm -rf neovim
 sudo apt install tmux
 ```
 
+### catppuccin-tmux
+```
+mkdir -p ~/.config/tmux/plugins/catppuccin
+git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+```
+
 ### tpm
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
