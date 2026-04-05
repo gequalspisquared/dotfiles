@@ -44,7 +44,7 @@
 
 # Font
 font-family = "JetBrainsMono Nerd Font Mono"
-font-size = 14
+font-size = 12
 
 # Theme
 theme = catppuccin-macchiato
@@ -59,4 +59,5 @@ cursor-style = block
 cursor-style-blink = true
 
 # Window
+maximize = true
 window-decoration = auto
