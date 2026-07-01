@@ -698,6 +698,7 @@ do
   --  See `:help lsp-config` for information about keys and how to configure
   ---@type table<string, vim.lsp.Config>
   local servers = {
+    ols = {},
     -- clangd = {},
     -- gopls = {},
     -- pyright = {},
@@ -859,6 +860,13 @@ do
       --
       -- See `:help blink-cmp-config-keymap` for defining your own keymap
       preset = 'default',
+
+      signature = {
+        enabled = true,
+        trigger = {
+          show_on_insert = true,
+        },
+      },
 
       -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
       --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
